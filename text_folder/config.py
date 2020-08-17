@@ -1,0 +1,5 @@
+#TwitterAPIから個人の認証IDなどをここに入力
+CONSUMER_KEY = ""
+CONSUMER_SECRET = ""
+ACCESS_TOKEN = ""
+ACCESS_TOKEN_SECRET = ""
