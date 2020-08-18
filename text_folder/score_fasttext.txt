@@ -1,0 +1,80 @@
+~/fastText$ ./fasttext test-label model.bin model_1-5tweet_test.txt
+F1-Score : 0.185206  Precision : 0.953488  Recall : 0.102564   __label__5
+F1-Score : 0.479814  Precision : 0.348660  Recall : 0.769135   __label__4
+F1-Score : 0.471069  Precision : 0.367174  Recall : 0.656962   __label__1
+F1-Score : 0.126623  Precision : 0.427007  Recall : 0.074333   __label__2
+F1-Score : 0.379242  Precision : 0.342960  Recall : 0.424107   __label__3
+F1-Score : 0.227860  Precision : 0.377778  Recall : 0.163125   __label__6
+N	9387
+P@1	0.368
+R@1	0.368
+
+
+#unit.txt
+~/fastText$ ./fasttext test-label model_tune.bin model_1-5tweet_test.txt
+F1-Score : 0.416236  Precision : 0.572210  Recall : 0.327079   __label__5
+F1-Score : 0.543445  Precision : 0.462987  Recall : 0.657747   __label__4
+F1-Score : 0.486536  Precision : 0.466087  Recall : 0.508861   __label__1
+F1-Score : 0.293402  Precision : 0.349429  Recall : 0.252859   __label__2
+F1-Score : 0.381477  Precision : 0.387500  Recall : 0.375638   __label__3
+F1-Score : 0.348545  Precision : 0.315061  Recall : 0.389993   __label__6
+N	9387
+P@1	0.420
+R@1	0.420
+
+
+~/fastText$ ./fasttext test-label model_tune2.bin model_1-5tweet_test.txt
+F1-Score : 0.436639  Precision : 0.485824  Recall : 0.396498   __label__5
+F1-Score : 0.538758  Precision : 0.482521  Recall : 0.609832   __label__4
+F1-Score : 0.488218  Precision : 0.467052  Recall : 0.511392   __label__1
+F1-Score : 0.314486  Precision : 0.332155  Recall : 0.298602   __label__2
+F1-Score : 0.380983  Precision : 0.383819  Recall : 0.378189   __label__3
+F1-Score : 0.325532  Precision : 0.337252  Recall : 0.314599   __label__6
+N	9387
+P@1	0.420
+R@1	0.420
+
+
+~/fastText$ ./fasttext dump model_tune.bin args
+dim 580
+ws 5
+epoch 45
+minCount 1
+neg 5
+wordNgrams 1
+loss softmax
+model sup
+bucket 380069
+minn 3
+maxn 6
+lrUpdateRate 100
+t 0.0001
+
+
+~/fastText$ ./fasttext dump model_tune2.bin argsdim 820
+ws 5
+epoch 44
+minCount 1
+neg 5
+wordNgrams 1
+loss softmax
+model sup
+bucket 400887
+minn 3
+maxn 6
+lrUpdateRate 100
+t 0.0001
+
+
+mecab-neを使用
+~/fastText$ ./fasttext test-label model_ne.bin model_ne_test.txt
+F1-Score : 0.444444  Precision : 0.474769  Recall : 0.417761   __label__5
+F1-Score : 0.546299  Precision : 0.511970  Recall : 0.585563   __label__4
+F1-Score : 0.484774  Precision : 0.471574  Recall : 0.498734   __label__1
+F1-Score : 0.341391  Precision : 0.321891  Recall : 0.363405   __label__2
+F1-Score : 0.386364  Precision : 0.393519  Recall : 0.379464   __label__3
+F1-Score : 0.327149  Precision : 0.365482  Recall : 0.296093   __label__6
+N	9387
+P@1	0.426
+R@1	0.426
+
