@@ -29,5 +29,3 @@ epoch数など増やすなど(過学習も考慮して)まだ改善の余地が�
 
 
 
-
-All rights reserved.
